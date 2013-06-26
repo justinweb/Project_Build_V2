@@ -1,0 +1,20 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"> 
+
+<PropertyGroup>
+<RootDir>../</RootDir>
+<SourceDir>../</SourceDir>
+</PropertyGroup>
+
+<ItemGroup>
+    <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\iBase2Lib\bin\$(ConfigureVersion)\iBase2Lib.*"/> 
+</ItemGroup>
+
+<ItemGroup>
+<!-- 設定要更新DLL的來源目錄，因為TX4iCeneter需要用到新版的ExcelDLL -->
+    <DLLSourceFiles Include="D:\TestData\Project_Build_V2\NewDLLS\ExcelDLL"/>   
+</ItemGroup>
+
+<Import Project="$(WorkPath)\MSBuildSettings_User.targets"/>
+<Import Project="$(CommonProjPath)\Polaris_ProjectBuild.proj"/>
+
+</Project>

@@ -1,0 +1,17 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"> 
+
+<PropertyGroup>
+<RootDir>../</RootDir>
+<SourceDir>../</SourceDir>
+</PropertyGroup>
+
+<ItemGroup>   
+  <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\ModelPricePublishServer\bin\$(ConfigureVersion)\CLR2.Polaris.ModelPricePublish.*"/>
+  <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\ModelPriceCalculatorLib\bin\$(ConfigureVersion)\CLR2.Polaris.ModelPriceCalculatorLib.*"/>
+
+</ItemGroup>
+
+<Import Project="$(WorkPath)\MSBuildSettings_User.targets"/>
+<Import Project="$(CommonProjPath)\Polaris_ProjectBuild.proj"/>
+
+</Project>

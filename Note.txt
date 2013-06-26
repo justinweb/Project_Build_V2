@@ -1,0 +1,19 @@
+﻿Installion
+1. 執行InitBuild.bat，將「必要元件」下的DLL都複製到「NewDLLs」中。
+2. 修改CLR2_Porjects\MSBuildSettings_User.targets中的「設定要儲存編譯後最新DLL的目錄」及「設定要更新DLL的來源目錄」。
+3. 修改TX4_Projects\MSBuildSettings_User.targets中的「設定要儲存編譯後最新DLL的目錄」及「設定要更新DLL的來源目錄」。
+4. 設定MSBuildCmd_XXX_Core.bat中的CommonDir環境變數。
+5. 修改TX4_Projects\MSBuildSettings_TX4iCenter.proj中的<DLLSourceFiles>路徑。
+
+OtherComponent
+1. IPUSH元件
+2. 資訊處下單元件(PolaFixOrder, PolaDerOrder)
+
+Build
+1. 先執行CLR2_Projects\MSBuildCmd_CLR2.bat
+2. 執行CLR2_Projects\MSBuildCmd_Publish.bat
+
+
+Question
+1. (Fixed)TX4iCenter需要用到新版的Excel
+2. (Fixed)TX4ModelPrice 需要用到ManagedCPPAPI.netmodule

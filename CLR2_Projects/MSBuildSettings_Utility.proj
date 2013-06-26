@@ -1,0 +1,20 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"> 
+
+<PropertyGroup>
+<RootDir>../</RootDir>
+<SourceDir>../</SourceDir>
+</PropertyGroup>
+
+<ItemGroup>
+  <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\CLR2.Polaris.Util\bin\$(ConfigureVersion)\CLR2.Polaris.Util.*"/> 
+  <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\CLR2.Polaris.Util.Windows\bin\$(ConfigureVersion)\CLR2.Polaris.Util.Windows.*"/> 
+  <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\DockingControls\bin\$(ConfigureVersion)\DockingControls.*"/>
+  <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\ExcelController\bin\$(ConfigureVersion)\CLR2.Polaris.Util.ExcelControlLibrary.*"/>
+  <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\OfficeLib\bin\$(ConfigureVersion)\CLR2.Polaris.Util.OfficeLib.*"/>
+  <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\XPTable\bin\$(ConfigureVersion)\XPTable.*"/>
+</ItemGroup>
+
+<Import Project="$(WorkPath)\MSBuildSettings_User.targets"/>
+<Import Project="$(CommonProjPath)\Polaris_ProjectBuild.proj"/>
+
+</Project>

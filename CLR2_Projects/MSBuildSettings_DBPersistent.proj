@@ -1,0 +1,16 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"> 
+
+<PropertyGroup>
+<RootDir>../</RootDir>
+<SourceDir>../</SourceDir>
+</PropertyGroup>
+
+<ItemGroup>
+  <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\DBPersistentBase\bin\$(ConfigureVersion)\CLR2.Polaris.DBPersistentBase.*"/> 
+  <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\DBPersistent\bin\$(ConfigureVersion)\CLR2.Polaris.DBPersistent.*"/> 
+</ItemGroup>
+
+<Import Project="$(WorkPath)\MSBuildSettings_User.targets"/>
+<Import Project="$(CommonProjPath)\Polaris_ProjectBuild.proj"/>
+
+</Project>

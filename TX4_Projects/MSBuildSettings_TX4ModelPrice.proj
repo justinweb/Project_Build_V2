@@ -1,0 +1,32 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"> 
+
+<PropertyGroup>
+<ExtraRef>*.ctf</ExtraRef>  
+</PropertyGroup> 
+
+<ItemGroup>
+    
+    <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\ModelCalculator\bin\$(ConfigureVersion)\CLR2.Polaris.TX4.ModelCalculator.*"/> 
+    <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\ModelCalculator\bin\$(ConfigureVersion)\CLR2.Polaris.TX4.ModelParameter.*"/>
+    <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\TX4ProductPriceCalculator\bin\$(ConfigureVersion)\CLR2.Polaris.TX4.ProductPriceCalculator.*"/>
+    <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\TX4ModelPriceBase\bin\$(ConfigureVersion)\CLR2.Polaris.TX4.TX4ModelPriceBase.*"/>
+	<DLLReleaseFiles Include="$(SourceDir)$(SlnName)\VolStrikeLib\bin\$(ConfigureVersion)\RM.Polaris.VolStrikeLib.*"/>
+	<DLLReleaseFiles Include="$(SourceDir)$(SlnName)\TX4PricingLibrary\bin\$(ConfigureVersion)\TX4PricingLibrary.*"/>
+ 
+    <UpdateSourceFiles Include="$(SourceDir)Dlls\*.*"/>
+</ItemGroup>
+
+<Import Project="$(WorkPath)\MSBuildSettings_User.targets"/>
+<Import Project="$(CommonProjPath)\Polaris_ProjectBuild.proj"/>
+
+<!-- Override -->
+<Target Name="SlnBeforeBuild">
+	<Message Text="override sln BeforeBuild" />
+	<Message Text="Copy $(DLLReleaseFolder)\ManagedCPPAPI.netmodule to .\Dlls" />
+	<Copy        
+		SourceFiles="$(DLLReleaseFolder)\ManagedCPPAPI.netmodule"
+		DestinationFolder=".\Dlls\"
+	/>
+</Target>
+
+</Project>

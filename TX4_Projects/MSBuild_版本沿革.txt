@@ -1,0 +1,6 @@
+2010/10/30 Justin
+* 開始記錄
+* 加入可指定設定檔名稱功能
+  - 修改BulidSolution.bat
+  - 修改VSSGet.proj
+  - 修改Polaris_ProjectBuild.proj

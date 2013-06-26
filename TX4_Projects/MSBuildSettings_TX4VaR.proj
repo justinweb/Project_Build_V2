@@ -1,0 +1,17 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"> 
+      
+<PropertyGroup>
+<RootDir>../</RootDir>
+<SourceDir>../</SourceDir>
+<ExtraRef>*.ctf</ExtraRef> 
+</PropertyGroup>      
+
+<ItemGroup>
+	<DLLReleaseFiles Include="$(SourceDir)$(SlnName)\GeneralMatrix\bin\$(ConfigureVersion)\GeneralMatrix.*"/> 
+    <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\VaRUtil\bin\$(ConfigureVersion)\CLR2.Polaris.TX4.VaRUtil.*"/>      
+</ItemGroup>
+
+<Import Project="$(WorkPath)\MSBuildSettings_User.targets"/>
+<Import Project="$(CommonProjPath)\Polaris_ProjectBuild.proj"/>
+
+</Project>

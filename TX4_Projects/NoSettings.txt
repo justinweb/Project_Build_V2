@@ -1,0 +1,7 @@
+.bat
+.xml
+.config
+.txt
+.vshost
+.pdb
+_mcr

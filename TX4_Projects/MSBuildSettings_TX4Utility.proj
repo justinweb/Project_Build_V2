@@ -1,0 +1,18 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"> 
+      
+<PropertyGroup>
+<RootDir>../</RootDir>
+<SourceDir>../</SourceDir>
+</PropertyGroup>      
+
+<ItemGroup>
+    
+    <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\TX4Utility\bin\$(ConfigureVersion)\CLR2.Polaris.TX4.Utility.*"/> 
+    <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\CommonGUI\bin\$(ConfigureVersion)\CLR2.Polaris.TX4.CommonGUI.*"/>    
+  
+</ItemGroup>
+
+<Import Project="$(WorkPath)\MSBuildSettings_User.targets"/>
+<Import Project="$(CommonProjPath)\Polaris_ProjectBuild.proj"/>
+
+</Project>

@@ -1,0 +1,29 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+<PropertyGroup>
+<!-- 設定要儲存編譯後最新DLL的目錄 -->
+<DLLReleaseFolder>D:\TestData\Project_Build_V2\NewDLLs</DLLReleaseFolder>
+<!-- 設定要由VSS中取得的編譯版本，空白表示取最新版本 -->
+<VSSVersion></VSSVersion>
+<!-- 設定要存取其它擴充函式庫的目錄 -->
+<ExtProgramPath>D:\Ext Programs\</ExtProgramPath>
+<!-- 設定要編譯的組態(通常是Release或Debug) -->
+<ConfigureVersion>Release</ConfigureVersion>
+<!-- 設定共用的MSBuild專案檔的路徑 -->
+<CommonProjPath>D:\TestData\Project_Build_V2\CommonProj</CommonProjPath>
+<!-- 設定原始程式碼的根目錄 -->
+<WorkPath>D:\TestData\Project_Build_V2\CLR2_Projects</WorkPath>
+
+<!-- 有關VSS的設定 -->
+<VSSDBPath>X:/TX4DB/srcsafe.ini</VSSDBPath>
+<VSSUser>nant</VSSUser>
+<VSSPassword>nant</VSSPassword>
+
+</PropertyGroup>
+
+<ItemGroup>
+<!-- 設定要更新DLL的來源目錄 -->
+    <DLLSourceFiles Include="D:\TestData\Project_Build_V2\NewDLLS"/>   
+</ItemGroup>
+ 
+</Project>

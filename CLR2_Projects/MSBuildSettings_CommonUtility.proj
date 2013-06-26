@@ -1,0 +1,16 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"> 
+
+<PropertyGroup>
+<RootDir>../</RootDir>
+<SourceDir>../</SourceDir>
+</PropertyGroup>
+
+<ItemGroup>
+  <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\GUIBase\bin\$(ConfigureVersion)\CLR2.Polaris.GUIBase.*"/> 
+  <DLLReleaseFiles Include="$(SourceDir)$(SlnName)\SecurityUtility\bin\$(ConfigureVersion)\CLR2.Polaris.SecurityUtility.*"/> 
+</ItemGroup>
+
+<Import Project="$(WorkPath)\MSBuildSettings_User.targets"/>
+<Import Project="$(CommonProjPath)\Polaris_ProjectBuild.proj"/>
+
+</Project>
